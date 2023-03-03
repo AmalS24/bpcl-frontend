@@ -6,7 +6,6 @@ import api from "../Api";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [accessToken, setAccessToken] = useState();
   const [data, setData] = useState({});
   const nav = useNavigate()
 
@@ -26,9 +25,10 @@ const Login = () => {
       .post(api.userLogin, data)
       .then((res) => {
         if (res.status === 200) {
-          const { userId, token } = res.data;
-          console.log(userId, token);
+          const { userId, type, token } = res.data;
+          console.log(userId, type, token);
           localStorage.setItem('userId',userId)
+          localStorage.setItem('userType',type)
           localStorage.setItem('access_token',token)
           nav('/user')
         } else {

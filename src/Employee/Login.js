@@ -28,6 +28,8 @@ const Login = () => {
         if (res.status === 200) {
           const { userId, token } = res.data;
           console.log(userId, token);
+          localStorage.setItem('userId',userId)
+          localStorage.setItem('access_token',token)
           nav('/user')
         } else {
           alert("Failed to Login");

@@ -10,7 +10,7 @@ function App() {
   return (
     <>
         <BrowserRouter>
-          <div className="w-screen  h-screen bg-slate-300">
+          <div className="w-screen h-auto min-h-screen bg-slate-300">
             <Routes>
               <Route path="/" element={<Login/>} exact/>
               <Route path="/404" element={<PageNotFound/>} exact/>

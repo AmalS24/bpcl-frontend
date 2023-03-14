@@ -1,9 +1,11 @@
 import React from 'react'
 
-const PageNotFound = () => {
+export const PageNotFound = () => {
   return (
-    <div>404 PageNotFound</div>
+    <div className='w-screen h-screen flex items-center justify-center bg-slate-300'>
+        <p className="textxl font-mono font-bold">404</p>
+    </div>
   )
 }
 
-export default PageNotFound
+export default PageNotFound;

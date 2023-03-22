@@ -1,16 +1,17 @@
 
-import Login from "./Employee/Login";
+// import Login from "./Employee/Login";
 import EmployeePage from "./Employee/HomePage";
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import PivateRoute from "./components/PivateRoute";
 import PageNotFound from "./components/PageNotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Login from "./loginPages/Login"
 
 function App() {
   
   return (
     <>
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <div className="w-screen  h-screen bg-slate-300">
             <Routes>
               <Route path="/" element={<Login/>} exact/>
@@ -24,7 +25,8 @@ function App() {
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
-        </BrowserRouter>
+        </BrowserRouter> */}
+        <Login />
     </>
   );
 }

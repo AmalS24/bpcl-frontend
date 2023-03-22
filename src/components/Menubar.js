@@ -18,6 +18,7 @@ const Menubar = () => {
             onClick={()=>{
               localStorage.removeItem('access_token')
               localStorage.removeItem('userId')
+              localStorage.removeItem('userType')
               nav('/')
             }}
           >LOG OUT</p>
